@@ -46,12 +46,14 @@ use task::local_data:: {
     local_data_set
 };
 
-
 // Include OS X Frameworks
 #[nolink]
 #[cfg(target_os = "macos")]
 #[link_args="-framework Cocoa -framework OpenGL -framework IOKit -framework CoreFoundation"]
 extern mod osx_frameworks {}
+
+pub mod gl;
+pub mod glu;
 
 // GLFW Linking
 
